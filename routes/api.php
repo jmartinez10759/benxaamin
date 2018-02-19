@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+#debuger("llego_api");
+Route::get('empleados','api\EmpleadoApiController@index')->name('listar');
+Route::get('empleados/{?}','api\EmpleadoApiController@index')->name('listar_empleado');
+Route::post('empleados','api\EmpleadoApiController@index')->name('guardar');
+Route::put('empleados','api\EmpleadoApiController@index')->name('actualizar');
+Route::delete('empleados','api\EmpleadoApiController@index')->name('borrar');
+
+
+
+

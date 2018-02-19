@@ -16,5 +16,8 @@ Route::get('/', function () {
 });
 
 ###########empleados############
-Route::get('empleados','api\EmpleadoApiController@index')->name('lista_empleado');
+Route::get('empleados','Web\EmpleadoWebController@index')->name('lista_empleado');
+Route::post('empleados/guardar','Web\EmpleadoWebController@create')->name('save_empleado');
+/*Route::get('empleados','Web\EmpleadoWebController@index')->name('lista_empleado');
+Route::get('empleados','Web\EmpleadoWebController@index')->name('lista_empleado');*/
 
